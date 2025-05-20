@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PU103馬哥小面攤預購單</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    label {
+      display: block;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #000000cc;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #333;
+    }
+
+    .menu {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ffffff50;
+    }
+
+    .menu h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PU103馬哥小面攤預購單</h1>
+  </header>
+
+  <div class="container">
+    <form>
+      <label for="leader">老師/負責人的姓名</label>
+      <input type="text" id="leader" name="leader" required />
+
+      <label for="phone">老師/負責人電話</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" placeholder="例：0912345678"/>
+
+      <label for="class">班級</label>
+      <select id="class" name="class" required>
+        <option value="">請選擇班級</option>
+        <option value="國101">國101</option>
+        <option value="國102">國102</option>
+        <option value="國103">國103</option>
+        <option value="國104">國104</option>
+        <option value="國105">國105</option>
+        <option value="國106">國106</option>
+        <option value="國107">國107</option>
+        <option value="國108">國108</option>
+        <option value="國109">國109</option>
+        <option value="國110">國110</option>
+        <option value="國111">國111</option>
+        <option value="國201">國201</option>
+        <option value="國202">國202</option>
+        <option value="國203">國203</option>
+        <option value="國204">國204</option>
+        <option value="國205">國205</option>
+        <option value="國206">國206</option>
+        <option value="國207">國207</option>
+        <option value="國208">國208</option>
+        <option value="國209">國209</option>
+        <option value="國210">國210</option>
+        <option value="國211">國211</option>
+        <option value="普101">普101</option>
+        <option value="普102">普102</option>
+        <option value="普103">普103</option>
+        <option value="普104">普104</option>
+        <option value="普105">普105</option>
+        <option value="普201">普201</option>
+        <option value="普202">普202</option>
+        <option value="普203">普203</option>
+        <option value="普204">普204</option>
+        <option value="普205">普205</option>
+        <option value="機電101">機電101</option>
+        <option value="機電102">機電102</option>
+        <option value="應英101">應英101</option>
+        <option value="多媒101">多媒101</option>
+        <option value="資訊101">資訊101</option>
+        <option value="機電201">機電201</option>
+        <option value="機電202">機電202</option>
+        <option value="應英201">應英201</option>
+        <option value="多媒201">多媒201</option>
+        <option value="資訊201">資訊201</option>
+      </select>
+
+      <div class="menu">
+        <h2>餐點：炒泡麵（加蛋+飲料）$60/份</h2>
+        <label for="quantity">數量</label>
+        <input type="number" id="quantity" name="quantity" min="1" required />
+      </div>
+
+      <button type="submit">提交預購</button>
+    </form>
+  </div>
+</body>
+</html>
